@@ -1,8 +1,11 @@
-let clicks = 0
-clicks = parseInt( $("h2").text());
-console.log(clicks)
+clicks = parseInt($("h2").text());
 
-$("button").click(() => {
-    clicks = clicks + 1;
+$("#buttonUp").click(() => {
+    clicks++;
+    $("h2").text(clicks);
+})
+
+$("#buttonDown").click(() => {
+    clicks--;
     $("h2").text(clicks);
 })
